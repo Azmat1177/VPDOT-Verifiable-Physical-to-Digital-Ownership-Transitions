@@ -10,7 +10,7 @@
 
 > **Ethereum Foundation PhD Fellowship 2026 — Software-Defined Operations for Small Businesses**
 >
-> ⚠️ This repository is the research workspace for an active PhD fellowship proposal.
+> This repository is the research workspace for a PhD fellowship proposal.
 > No production code has been deployed yet. Development begins upon fellowship approval.
 > This README documents the planned architecture, scope, and research context.
 
@@ -59,17 +59,17 @@ When temperature-sensitive medicines are damaged in transit, establishing liabil
 triggering insurance can take **weeks of manual reconciliation** across incompatible ERP
 and SaaS systems. The EU Falsified Medicines Directive (2011/62/EU) mandates end-to-end
 custody verification, yet most SME implementations depend on centralised national hubs
-that reintroduce the very platform risk, vendor lock-in, and opaque reconciliation
-overhead the regulation was designed to eliminate.
+that reintroduces the very platform risk, vendor lock-in, and opaque reconciliation
+Overhead, the regulation was designed to eliminate.
 
 ### Four Cost Dimensions VPDOT Targets
 
-| Cost Type | Description |
-|-----------|-------------|
-| **Handoff ambiguity** | Time and legal overhead when ownership is disputed at cold-chain handoff points |
-| **Reconciliation overhead** | Labour hours resolving discrepancies between ERP records, paper batch certificates, and EMVS hub data |
-| **Insurance dispute latency** | Average time from cold-chain excursion event to liability determination and payout |
-| **Compliance documentation burden** | GDP-mandated audit trail costs borne disproportionately by small distributors |
+|            Cost Type                |                            Description                                          |
+|-------------------------------------|---------------------------------------------------------------------------------|
+| **Handoff ambiguity**               | Time and legal overhead when ownership is disputed at cold-chain handoff points |
+| **Reconciliation overhead**         | Labour hours resolving discrepancies between ERP records, paper batch certificates, and EMVS hub data |
+| **Insurance dispute latency**       | Average time from cold-chain excursion event to liability determination and payout|
+| **Compliance documentation burden** | GDP-mandated audit trail costs borne disproportionately by small distributors     |
 
 ---
 
@@ -125,7 +125,7 @@ State Transition Triggered  ──►  Escrow / Insurance / Compliance Log
 ---
 
 ## Architecture
-
+```
 ┌─────────────────────────────────────────────────────────────┐
 │                     ETHEREUM L2 (Optimism)                  │
 │                                                             │
@@ -161,18 +161,18 @@ State Transition Triggered  ──►  Escrow / Insurance / Compliance Log
 │                        │
 │  Target BoM: ~€28/node │
 └────────────────────────┘
-
+```
 ---
 
 ## Hardware Stack
 
-| Component | Specification | Purpose |
-|-----------|--------------|---------|
-| **ESP32** | Dual-core 240MHz, 520KB SRAM | Main MCU; SRAM-PUF entropy source |
-| **DHT22** | ±0.5°C accuracy, −40°C to +80°C | Temperature & humidity |
-| **ADXL345** | ±16g range, 13-bit resolution | Vibration & shock detection |
-| **GPS module** | NMEA 0183, 2.5m CEP | Location attestation |
-| **Total BoM target** | — | **~€28 per node** |
+| Component            |          Specification          |             Purpose               |
+|----------------------|---------------------------------|-----------------------------------|
+| **ESP32**            | Dual-core 240MHz, 520KB SRAM    | Main MCU; SRAM-PUF entropy source |
+| **DHT22**            | ±0.5°C accuracy, −40°C to +80°C | Temperature & humidity            |
+| **ADXL345**          | ±16g range, 13-bit resolution   | Vibration & shock detection       |
+| **GPS module**       | NMEA 0183, 2.5m CEP             | Location attestation              |
+| **Total BoM target** |                   —             | **~€28 per node**                 |
 
 SRAM-PUF reliability: consistent key derivation demonstrated at −25°C, +25°C, and +85°C,
 directly relevant to pharmaceutical cold-chain environments.
@@ -251,10 +251,10 @@ monitoring pipeline in an operational agrifood SME setting, validating transfera
 
 | Vertical | Application |
 |----------|-------------|
-| 🌾 Agrifood distribution | Temperature-authenticated produce custody |
-| 🍕 Restaurant supply chains | Ingredient provenance and freshness attestation |
-| 🥦 Fresh produce cold-chain | Automated liability on excursion events |
-| 🏭 Any regulated physical commerce | Generalised via the VPI ERC standard |
+|    Agrifood distribution    | Temperature-authenticated produce custody |
+|    Restaurant supply chains | Ingredient provenance and freshness attestation |
+|    Fresh produce cold-chain | Automated liability on excursion events |
+|    Any regulated physical commerce | Generalised via the VPI ERC standard |
 
 The VPI (Verifiable Physical Identity) ERC standard being developed as part of this
 project is designed from the outset to be vertical-agnostic, providing a standard
