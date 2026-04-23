@@ -277,11 +277,11 @@ interface for PUF-anchored physical asset authentication on Ethereum.
 **Azmat Ullah** — PhD Candidate  
 University of Cagliari & University of Camerino, Italy  
 📧 azmat.ullah@unicam.it  
-🔗 [ORCID](https://orcid.org/0009-0006-4452-3948) · [ResearchGate](https://www.researchgate.net/profile/Azmat-Ullah-26) · [GitHub](https://github.com/azmat1177)
+🔗 [ORCID](https://orcid.org/0009-0006-4452-3948)  [ResearchGate](https://www.researchgate.net/profile/Azmat-Ullah-26)  [GitHub](https://github.com/azmat1177)
 
 **Supervisor: Prof. Roberto Tonelli**  
 Department of Mathematics & Information Technology, University of Cagliari  
-🔗 [Academic Profile](https://web.unica.it/unica/page/it/roberto_tonelli)
+🔗 [ORCID](https://orcid.org/0000-0002-9090-7698)  [Academic Profile](https://web.unica.it/unica/page/it/roberto_tonelli)
 
 ---
 
