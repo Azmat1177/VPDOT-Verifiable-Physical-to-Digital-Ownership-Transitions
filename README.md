@@ -126,27 +126,26 @@ State Transition Triggered  ──►  Escrow / Insurance / Compliance Log
 
 ## Architecture
 
-```
 ┌─────────────────────────────────────────────────────────────┐
 │                     ETHEREUM L2 (Optimism)                  │
 │                                                             │
-│  ┌──────────────────┐    ┌──────────────────────────────┐  │
-│  │  VPDOTAsset.sol  │    │   ConditionalEscrow.sol      │  │
-│  │  (ERC-721 +      │◄──►│   (USDC/DAI release on       │  │
-│  │   AssetState SM) │    │    PUF-signed delivery)      │  │
-│  └────────┬─────────┘    └──────────────────────────────┘  │
-│           │                                                  │
-│  ┌────────▼─────────┐    ┌──────────────────────────────┐  │
-│  │ PUFVerifier.sol  │    │  InsuranceTrigger.sol        │  │
-│  │ (ecrecover +     │    │  (automated payout on        │  │
-│  │  device registry)│    │   excursion attestation)     │  │
-│  └──────────────────┘    └──────────────────────────────┘  │
+│  ┌──────────────────┐    ┌──────────────────────────────┐   │
+│  │  VPDOTAsset.sol  │    │   ConditionalEscrow.sol      │   │
+│  │  (ERC-721 +      │◄──►│   (USDC/DAI release on       │   │
+│  │   AssetState SM) │    │    PUF-signed delivery)      │   │
+│  └────────┬─────────┘    └──────────────────────────────┘   │
+│           │                                                 │
+│  ┌────────▼─────────┐    ┌──────────────────────────────┐   │
+│  │ PUFVerifier.sol  │    │  InsuranceTrigger.sol        │   │
+│  │ (ecrecover +     │    │  (automated payout on        │   │
+│  │  device registry)│    │   excursion attestation)     │   │
+│  └──────────────────┘    └──────────────────────────────┘   │
 │                                                             │
-│  ┌──────────────────────────────────────────────────────┐  │
-│  │  OpenZeppelin AccessControl                          │  │
-│  │  Roles: Manufacturer | Carrier | Pharmacist          │  │
-│  │         | Insurer | Regulator                        │  │
-│  └──────────────────────────────────────────────────────┘  │
+│  ┌──────────────────────────────────────────────────────┐   │
+│  │  OpenZeppelin AccessControl                          │   │
+│  │  Roles: Manufacturer | Carrier | Pharmacist          │   │
+│  │         | Insurer | Regulator                        │   │
+│  └──────────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────────┘
               ▲                          ▲
               │ HTTPS JSON-RPC           │ Kleros Arbitration
@@ -162,7 +161,6 @@ State Transition Triggered  ──►  Escrow / Insurance / Compliance Log
 │                        │
 │  Target BoM: ~€28/node │
 └────────────────────────┘
-```
 
 ---
 
