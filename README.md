@@ -174,7 +174,7 @@ State Transition Triggered  ──►  Escrow / Insurance / Compliance Log
 | **GPS module**       | NMEA 0183, 2.5m CEP             | Location attestation              |
 | **Total BoM target** |                   —             | **~€28 per node**                 |
 
-SRAM-PUF reliability: consistent key derivation demonstrated at −25°C, +25°C, and +85°C,
+SRAM-PUF reliability: consistent key derivation demonstrated at −25°C, and +25°C,
 directly relevant to pharmaceutical cold-chain environments.
 
 ---
