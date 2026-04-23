@@ -10,7 +10,7 @@
 
 > **Ethereum Foundation PhD Fellowship 2026 — Software-Defined Operations for Small Businesses**
 >
-> This repository is the research workspace for a PhD fellowship proposal.
+> This repository is the research workspace for a PhD fellowship.
 > No production code has been deployed yet. Development begins upon fellowship approval.
 > This README documents the planned architecture, scope, and research context.
 
