@@ -96,7 +96,7 @@ ESP32 Boot
 SRAM Power-Up State  ──►  PUF Key Derivation (no persistent storage)
     │
     ▼
-Sensor Readings (temp, humidity, vibration, GPS)
+Sensor Readings (temp, humidity, position/vibration, GPS)
     │
     ▼
 Hash + Session Nonce  ──►  secp256k1 ECDSA Signature
